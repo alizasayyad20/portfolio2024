@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Unica+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(255, 229, 232); /* Light yellow background */
+            margin: 0;
+
+        }
+        .navbar {
+            background-color: rgb(255, 253, 239); /* Matches light yellow */
+            border-bottom: 100px;
+            border-color:rgb(224, 6, 73);
+        }
+        .navbar-brand {
+            font-family: unica one;
+            color:rgb(224, 6, 73);
+            
+        }
+        .navbar-nav .nav-link {
+            font-family: unica one;
+            color: rgb(224, 6, 73);
+            
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff5722; /* Highlight color on hover */
+        }
+        .main {
+            text-align:center;
+            color: rgb(224, 6, 73);
+            font-family: unica one;
+            margin-top: 150px;
+            font-size: 100px;
+        }
+
+    .sub{
+        text-align:center;
+        color: rgb(224, 6, 73);
+        font-family: cutive mono, monospace;
+        margin-bottom: 150px;
+        margin-top: 20px;
+        font-weight:500;
+
+    }
+    .skills-title{
+        text-align: left;
+        color: rgb(224, 6, 73);
+        padding-left: 10%;
+        padding-top: 50px;
+        font-family: cutive mono, monospace;
+       
+    }
+
+    .skills-description{
+        text-align: left;
+        color: rgb(224, 6, 73);
+        padding-left: 10%;
+        padding-top: 15px;
+        font-family: cutive mono, monospace;}
+       
+
+    .skills-section {
+        background-color:rgb(255, 253, 239) ;
+        
+    }
+    .skills-icons img {
+    width: 60px; /* Size of the icons */
+    height: 60px;
+    margin-right: 1rem;
+    margin-top: 50px;
+        }
+    
+
+    @media (max-width: 768px) {
+    .skills-row {
+    flex-direction: column; /* Stack items vertically on small screens */
+    text-align: center;
+    }
+
+    .skills-icons img {
+    margin: 0.5rem; /* Add spacing between icons */
+    }
+    }
+
+    .divider
+    {
+        text-align: center;
+        background-color: rgb(224, 6, 73); 
+        color:rgb(255, 253, 239) ;
+        height: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        
+    }
+
+    .posters
+    {
+        text-align: center;
+        background-color: rgb(255, 253, 239);
+        color: rgb(224, 6, 73);
+        font-family: 'Courier New', Courier, monospace;
+        height: 300px;
+        padding-bottom: 20px;
+    }
+    .skillsmain
+    {background-color:rgb(255, 253, 239) ;
+    padding-bottom: 30px;
+    
+    }
+
+    .poster-img {
+            width: 100%; /* Makes posters responsive */
+            height: auto;
+            max-width: 300px; /* Default max size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .poster-img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .poster-col {
+            margin-bottom: 100px; /* Add spacing between rows */
+        
+        }
+
+        /* Media Query for Smaller Screens */
+        @media (max-width: 768px) {
+            .poster-img {
+                max-width: 200px; /* Reduce size on smaller screens */
+            }
+        }
+
+        .section-heading{
+        font-family: cutive mono, monospace;
+        text-align: center;
+        color: rgb(224, 6, 73) ;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        }
+        .vinyl-img {
+            width: 100%; /* Makes images responsive */
+            max-width: 400px; /* Limit max size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0.5rem; /* Spacing between images */
+            transition: transform 0.3s ease;
+        }
+
+        .vinyl-img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        @media (max-width: 768px) {
+            .vinyl-img {
+                max-width: 300px; /* Reduce size for smaller screens */
+            }
+        }
+
+        .vinylmain{
+        background-color:rgb(255, 253, 239);
+        padding-bottom: 50px;
+    }
+    .carousel-inner img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel {
+            max-width: 600px; /* Limit carousel width */
+            margin: 0 auto; /* Center the carousel */
+        }
+
+        @media (max-width: 768px) {
+        
+
+            .carousel-inner img {
+                max-width: 90%; /* Reduce image size on smaller screens */
+            }
+        }
+        .branding-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .subbranding{
+        text-align:center;
+        color: rgb(224, 6, 73);
+        font-family: cutive mono, monospace;
+        margin-bottom: 30px;
+        font-weight:500;}
+
+    .contact{
+    font-family: Unica One;
+    padding-top: 50px;
+ }
+
+    #contactmain{
+    color:rgb(242, 89, 147) ;
+    text-align: center;
+    font-size:60px;
+    background-color:rgb(255, 253, 239);
+padding-bottom: 50px; }
+
+.mail{
+font-family: cutive mono, monospace;
+text-align: center;
+font-size: 20px;}
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">aliza <br> Sayyad</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="#posters">designs.</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#skills">skills.</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#contactmain">contact.</a>
+        </li>
+        </ul>
+        </div>
+        </div>
+    </nav>
+
+    
+
+    <div class="container text-center mt-5">
+        <!-- Responsive Heading -->
+         <div class="main">
+        <h1 class="display-3 display-md-4 display-sm-5">aliza's Portfolio</h1> </div>
+        <!-- Responsive Subtext -->
+         <div class="sub">
+        <p class="fs-4 fs-md-5 fs-sm-6">
+            a design student at ISDI with interest in <br> GRAPHICS AND COMMUNICATION DESIGN
+        </p> </div>
+    </div>
+
+
+    <!-- Skills Section -->
+    <div id="skills">
+    <div class="skillsmain"> 
+    <div class="skills-section container">
+    <div class="row align-items-center skills-row d-flex">
+    <!-- Left Side: Heading and Description -->
+    <div class="col-lg-6 col-12">
+    <h2 class="skills-title">Skills</h2>
+    <p class="skills-description">
+    Here's a peek at the design <br> tools I love using to bring creative ideas to life! </p>
+    </div>
+    <!-- Right Side: Icons -->
+    <div class="col-lg-6 col-12 text-lg-end text-center skills-icons">
+    <!-- icons -->
+    <img src="portfolio_code/images/framer.jpg" alt="Software framer">
+    <img src="portfolio_code/images/ai.png" alt="Software illustrator">
+    <img src="portfolio_code/images/blender.jpg" alt="Software blender">
+    <img src="portfolio_code/images/ps.png" alt="Software photoshop">
+    <img src="portfolio_code/images/figma.png" alt="Software figma">
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+        <!-- Posters Section -->
+        <div id="posters">
+        <div class="posters-section container">
+        <h2 class="section-heading">posters</h2>
+        <div class="row justify-content-center">
+        <!-- Poster 1 -->
+        <div class="col-lg-3 col-md-6 poster-col d-flex justify-content-center">
+        <img src="portfolio_code/images/poster1.png" alt="Poster 1" class="poster-img">
+        </div>
+        <!-- Poster 2 -->
+        <div class="col-lg-3 col-md-6 poster-col d-flex justify-content-center">
+        <img src="portfolio_code/images/poster2.png" alt="Poster 2" class="poster-img">
+        </div>
+        <!-- Poster 3 -->
+        <div class="col-lg-3 col-md-6 poster-col d-flex justify-content-center">
+        <img src="portfolio_code/images/poster 3.png" alt="Poster 3" class="poster-img">
+        </div>
+        <!-- Poster 4 -->
+        <div class="col-lg-3 col-md-6 poster-col d-flex justify-content-center">
+        <img src="portfolio_code/images/poster 4.png" alt="Poster 4" class="poster-img">
+        </div>
+        </div>
+        </div>
+    </div>
+
+
+<!-- Vinyl Cover Design Section -->
+<div class="vinylmain">
+<div class="vinyl-section container">
+    <h2 class="section-heading">vinyl cover design</h2>
+    <div class="row justify-content-center">
+        <!-- Vinyl 1 -->
+        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <img src="portfolio_code/images/v1.png" alt="Vinyl Cover 1" class="vinyl-img">
+        </div>
+        <!-- Vinyl 2 -->
+        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <img src="portfolio_code/images/v2.png" alt="Vinyl Cover 2" class="vinyl-img">
+        </div>
+        <!-- Vinyl 3 -->
+        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <img src="portfolio_code/images/v3.png" alt="Vinyl Cover 3" class="vinyl-img">
+        </div>
+    </div>
+</div>
+</div>
+
+    <!-- Branding Section -->
+    <div class="branding-section container">
+        <h2 class="section-heading">branding</h2>
+        <p class="subbranding"> Meet Pawbbles - a grooming brand that's as vibrant and bubbly as the pets it cares for!<br>
+            Designed with love and style, it's grooming reimagined for your beloved companions.<br> swipe through!</p>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="portfolio_code/images/b1.png" class="d-block w-100" alt="Branding Slide 1">
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="portfolio_code/images/b2.png" class="d-block w-100" alt="Branding Slide 2">
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="portfolio_code/images/b3.png" class="d-block w-100" alt="Branding Slide 3">
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <img src="portfolio_code/images/b4.png" class="d-block w-100" alt="Branding Slide 4">
+                </div>
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <img src="portfolio_code/images/b5.png" class="d-block w-100" alt="Branding Slide 2">
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    
+    <div id="contactmain">
+    <div class="contact"> let's work together! </div> 
+    <p class="mail"> mail - sayyaliza11@gmail.com </p> 
+    <p class="mail"> instagraam - @alizadesignss </p>
+    
+    </div>
+    
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
